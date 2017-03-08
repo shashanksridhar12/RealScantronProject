@@ -31,7 +31,10 @@ public class VisualTester extends PApplet {
 		background(255);
 		if (images.size() > 0) {
 			current_image = images.get(currentImageIndex);
-			image(current_image, 0, 0);			// display image i
+			image(current_image, 0, 0);
+			fill(0);
+			text(mouseX +" " + mouseY,50,50);
+			// display image i
 		}
 	}
 
