@@ -33,8 +33,11 @@ public class VisualTester extends PApplet {
 			current_image = images.get(currentImageIndex);
 			image(current_image, 0, 0);
 			fill(0);
-			text(mouseX +" " + mouseY,50,50);
+			text(mouseX +", " + mouseY,mouseX,mouseY);
 			// display image i
+			
+			int color = OpticalMarkReader.countBlackPixels(mouseY, mouseX, w, h, current_image, 25);
+			text(color,mouseX, mouseY+40);
 		}
 	}
 
