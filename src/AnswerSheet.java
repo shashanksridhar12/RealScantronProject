@@ -41,7 +41,9 @@ public class AnswerSheet {
 			
 		}**/
 
-		
+	public void SaveToCSV(){
+		CSVData a = new CSVData("/Users/myaccount/Documents/workspace/ScanTronReader2/lib", new String[]{"percent correct", "percent incorrect", "number correct", "number incorrect"}, 0);	
+	}
 	
 	public String get(int index) {
 		return answerList.get(index);

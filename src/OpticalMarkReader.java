@@ -31,7 +31,7 @@ public class OpticalMarkReader {
 		image.loadPixels();
 		AnswerSheet answersheet = new AnswerSheet();
 		for (int i = 0; i < totalNumQuestions; i++) {
-			
+
 			int dVal = Integer.MAX_VALUE, darkestIndex = 0;
 			int r = i % numQuestionsPerCol;
 			for (int j = 0; j < totalNumAnswers; j++) {
@@ -43,6 +43,7 @@ public class OpticalMarkReader {
 			}
 			answersheet.add(darkestIndex);
 		}
+		answersheet.SaveToCSV();
 		return answersheet;
 	}
 
